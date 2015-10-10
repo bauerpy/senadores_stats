@@ -1,0 +1,10 @@
+//insertar bancada
+INSERT INTO bancadas (`bancada_descripcion`,`partido_id`) SELECT distinct a.bancada, p.partido_id  FROM `TABLE 8` a join partidos p on a.PARTIDO_POLITICO = p.partido_descripcion 
+
+//insertar senadores
+INSERT INTO senadores (`senador_nombre`,`senador_diputado`,`senador_codigo`,`bancada_id`) SELECT  a.NOMBRES,a.APELLIDOS, a.ID_PARLAMENTARIO, b.bancada_id  FROM `TABLE 8` a join bancadas b on a.bancada = b.bancada_descripcion 
+
+//insertar senadores por periodos
+INSERT INTO senadores_periodos (`senador_id`,`periodo_id`,`bancada_id`) SELECT  s.senador_id, 1, b.bancada_id  FROM senadores s join `TABLE 8` x on s.senador_codigo = x.id_parlamentario join bancadas b on x.bancada = b.bancada_descripcion 
+
+
