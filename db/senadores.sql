@@ -191,7 +191,7 @@ DROP TABLE IF EXISTS `senadores`;
 CREATE TABLE `senadores` (
   `senador_id` int(11) NOT NULL AUTO_INCREMENT,
   `senador_nombre` varchar(45) DEFAULT NULL,
-  `senador_diputado` varchar(45) DEFAULT NULL,
+  `senador_apellido` varchar(45) DEFAULT NULL,
   `senador_codigo` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`senador_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8;
@@ -273,4 +273,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-10-10 14:53:41
+-- Dump completed on 2015-10-10 15:20:42
